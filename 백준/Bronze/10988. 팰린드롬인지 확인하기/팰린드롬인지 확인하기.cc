@@ -1,24 +1,15 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    string s;
+    string s, t;
     cin >> s;
 
-    int l = s.size()-1;
-    for (int i=(l+1)/2-1; i>-1; i--){
-        if (s[i] != s[l-i]){
-            cout << 0;
-            return 0;
-        }
-    }
-
-    cout << 1;
-    return 0;
+    t = s;
+    reverse(t.begin(), t.end());
     
+    if (t == s) cout << 1;
+    else        cout << 0;
+    
+    return 0;
 }
